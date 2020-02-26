@@ -21,14 +21,6 @@
 <script>
 import {EventBus } from './Eventbus.js'
 export default {
-//   props: {
-//     totalQty: {
-//       type: Number
-//     },
-//     totalPrice: {
-//       type: Number
-//     }
-//   },
   data(){
       return {
           totalQty:0,
@@ -36,7 +28,6 @@ export default {
       }
   },
   created: function() {
-    // console.log(this.newName);
     EventBus.$on("inccountPassed", (count, price) => {
       this.totalQty += 1;
       this.totalPrice += 1 * price;
